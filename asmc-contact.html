@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — ASMC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-asmc">
+
+<header class="site">
+  <nav class="wrap" aria-label="Main">
+    <a href="index.html" class="mark">
+      <img src="images/Cultural_Club_Logo_BG.png" alt="ACPS Cultural Club logo">
+      <span>ACPS<em>Cultural Club</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="committee.html">Committee</a></li>
+      <li><a href="advisor.html">Advisor</a></li>
+      <li class="has-sub">
+        <a href="asmc.html" class="active">ASMC</a>
+        <ul class="sub-menu">
+          <li><a href="asmc.html">ASMC Home</a></li>
+          <li><a href="asmc-about.html">About</a></li>
+          <li><a href="asmc-events.html">Events</a></li>
+          <li><a href="asmc-band.html">Band</a></li>
+          <li><a href="asmc-committee.html">Committee</a></li>
+          <li><a href="asmc-advisor.html">Advisor</a></li>
+          <li><a href="asmc-contact.html">Contact</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="nav-cta" href="asmc-contact.html">Join the Club</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+
+
+<main>
+  <section class="page-header">
+    <div class="wrap">
+      <h1>Get in Touch</h1>
+      <p class="lede">Want to join, book the band for an event, or ask about rehearsals? Reach out below.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Contact details</h2>
+        <span class="contact-lede">We usually reply within a couple of school days.</span>
+        <div class="contact-detail">
+          <span>Email</span>
+          <a href="mailto:musicclub@adamjeeschool.edu">musicclub@adamjeeschool.edu</a>
+        </div>
+        <div class="contact-detail">
+          <span>Faculty Advisor</span>
+          <strong>Sukallyan Mukherji, Nusrat Jahan Nitu</strong>
+        </div>
+        <div class="contact-detail">
+          <span>Meets</span>
+          <strong>Tuesdays &amp; Thursdays — Auditorium</strong>
+        </div>
+        <div class="social-row">
+          <a href="https://www.instagram.com/asmc_band/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/asmc67/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V6h-3a3 3 0 0 0-3 3v2H8v3h3v6h3v-6h3l1-3h-4V9z"/></svg></a>
+        </div>
+      </div>
+      <form id="contact-form">
+        <div class="row-2">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="grade">Grade</label>
+            <input id="grade" name="grade" type="text" placeholder="e.g. Grade 9">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="reason">I'm reaching out about</label>
+          <select id="reason" name="reason">
+            <option>Joining the Band</option>
+            <option>Booking a performance</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Send message</button>
+        <p class="form-note">This opens your email app with the message ready to send.</p>
+      </form>
+    </div>
+  </section>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var subject = encodeURIComponent('ASMC: ' + f.reason.value + ' - ' + f.name.value);
+      var body = encodeURIComponent('Name: ' + f.name.value + '\nGrade: ' + f.grade.value + '\nEmail: ' + f.email.value + '\n\n' + f.message.value);
+      window.location.href = 'mailto:musicclub@adamjeeschool.edu?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-main">
+    <div class="foot-mark">
+      <img src="images/ASMC_Logo.jpeg" alt="ACPS Music Club logo">
+      <span>© 2026 ACPS Music Club, Adamjee Cantonment Public School</span>
+    </div>
+    <span><a href="mailto:musicclub@adamjeeschool.edu">musicclub@adamjeeschool.edu</a></span>
+  </div>
+  <div class="credit">
+    <div class="wrap">Website by- Ayush Chakraborty</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

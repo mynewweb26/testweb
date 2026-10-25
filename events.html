@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events — ACPS Cultural Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap" aria-label="Main">
+    <a href="index.html" class="mark">
+      <img src="images/Cultural_Club_Logo_BG.png" alt="ACPS Cultural Club logo">
+      <span>ACPS<em>Cultural Club</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="committee.html">Committee</a></li>
+      <li><a href="advisor.html">Advisor</a></li>
+      <li class="has-sub">
+        <a href="asmc.html">ASMC</a>
+        <ul class="sub-menu">
+          <li><a href="asmc.html">ASMC Home</a></li>
+          <li><a href="asmc-about.html">About</a></li>
+          <li><a href="asmc-events.html">Events</a></li>
+          <li><a href="asmc-band.html">Band</a></li>
+          <li><a href="asmc-committee.html">Committee</a></li>
+          <li><a href="asmc-advisor.html">Advisor</a></li>
+          <li><a href="asmc-contact.html">Contact</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="nav-cta" href="asmc.html">Explore ASMC</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+  <section class="page-header">
+    <div class="wrap">
+      <h1>Events</h1>
+      <p class="lede">Where to find the Cultural Club next — on and off campus.</p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       BANNER  (full-width, sits at the very top of the event)
+       HOW TO CHANGE IT:
+         1. Put your banner picture in the  images  folder, named  summit-banner.jpg
+            (or change the file name in src="..." below).
+         2. Best size: about 1920 x 600 pixels.
+         3. Change height="" in the style attribute to make the banner taller/shorter.
+            Change object-position (e.g. "center top") to choose which part is shown.
+       If no picture is found, a navy placeholder with the event name is shown instead.
+       ===================================================================== -->
+  <section class="event-banner" aria-label="Event banner">
+    <div class="event-banner-fallback">
+      <span>Adamjee School</span>
+      <strong>Cultural Summit-2026</strong>
+    </div>
+    <img src="Practise 3c.jpg" alt="Adamjee School Cultural Summit-2026 banner"
+         style="height:420px; object-position:center center;"
+         onerror="this.style.display='none';">
+  </section>
+
+  <!-- =====================================================================
+       FEATURED EVENT
+       ===================================================================== -->
+  <section class="summit">
+    <div class="wrap">
+      <span class="summit-tag">Upcoming Event</span>
+      <h2>Adamjee School Cultural Summit-2026</h2>
+      <p class="summit-lede">A celebration of music, art, literature, performance and culture, with 26 competitions and one sponsor-based showcase for students across the school.</p>
+
+      <!-- EVENT FACTS: edit the text inside each <strong> -->
+      <div class="summit-facts">
+        <div><span>Date</span><strong>To be announced</strong></div>
+        <div><span>Venue</span><strong>To be announced</strong></div>
+        <div><span>Open to</span><strong>Classes 6–12</strong></div>
+        <div><span>Segments</span><strong>27</strong></div>
+      </div>
+
+      <h3 class="sub-head">Categories</h3>
+      <p class="summit-note">All segments are divided into the following three categories.</p>
+      <div class="cat-grid">
+        <div class="cat-card"><b>A</b><div><h4>Junior</h4><span>Classes 6–8</span></div></div>
+        <div class="cat-card"><b>B</b><div><h4>Intermediate</h4><span>Classes 9–10</span></div></div>
+        <div class="cat-card"><b>C</b><div><h4>Senior</h4><span>Classes 11–12</span></div></div>
+      </div>
+      <p class="prize-line"><strong>Prizes:</strong> 1st, 2nd &amp; 3rd place in each applicable category.</p>
+
+      <h3 class="sub-head" id="segments">Segments</h3>
+      <p class="summit-note">Choose a group to filter the list. Tap “View details” on a segment for topics, themes and instruments.</p>
+
+      <!-- SEGMENT FILTER: do not edit unless you add a new group -->
+      <div class="seg-filters" role="group" aria-label="Filter segments">
+        <button type="button" class="seg-chip active" data-filter="all" aria-pressed="true">All <b>27</b></button><button type="button" class="seg-chip" data-filter="quiz" aria-pressed="false">Quizzes <b>5</b></button><button type="button" class="seg-chip" data-filter="vocal" aria-pressed="false">Vocal <b>6</b></button><button type="button" class="seg-chip" data-filter="instr" aria-pressed="false">Instrumental <b>2</b></button><button type="button" class="seg-chip" data-filter="lit" aria-pressed="false">Literary &amp; Speech <b>4</b></button><button type="button" class="seg-chip" data-filter="art" aria-pressed="false">Visual Arts <b>4</b></button><button type="button" class="seg-chip" data-filter="dance" aria-pressed="false">Dance &amp; Group <b>5</b></button><button type="button" class="seg-chip" data-filter="sponsor" aria-pressed="false">Sponsored <b>1</b></button>
+      </div>
+
+      <!-- SEGMENT LIST
+           To add a new segment: copy one whole <article class="seg-card"> ... </article> block,
+           paste it at the end of the list, and edit the number, name, fee and description.
+           data-cat must be one of: quiz, vocal, instr, lit, art, dance, sponsor -->
+      <div class="seg-grid">
+          <article class="seg-card" data-cat="quiz">
+            <div class="seg-top"><span class="seg-num">01</span><span class="seg-fee">50/-</span></div>
+            <h3>Pop-Culture Quiz</h3>
+            <p class="seg-desc">A fun quiz covering popular movies, TV shows, music, celebrities, internet culture, trends, and iconic moments. Questions will test both general awareness and pop-culture knowledge.</p>
+            <details class="seg-details"><summary>Quiz focus areas</summary><div class="seg-details-body"><dl class="seg-kv"><div><dt>Movie</dt><dd>Harry Potter, Titanic, 3 Idiots</dd></div><div><dt>Series</dt><dd>Squid Game</dd></div><div><dt>Music</dt><dd>Michael Jackson, James, Ayub Bachchu</dd></div><div><dt>Celebrity</dt><dd>Robert Downey Jr, Tom Holland, Shah Rukh Khan</dd></div></dl></div></details>
+          </article>
+          <article class="seg-card" data-cat="quiz">
+            <div class="seg-top"><span class="seg-num">02</span><span class="seg-fee">50/-</span></div>
+            <h3>Anime Quiz</h3>
+            <p class="seg-desc">A quiz for anime enthusiasts covering popular and classic series, characters, storylines, studios, terminology, and iconic moments. Questions may range from easy recognition to deeper fan knowledge.</p>
+            <details class="seg-details"><summary>Series by category</summary><div class="seg-details-body"><div class="seg-cols"><div><h5>Category A</h5><ul><li>Demon Slayer</li><li>One Punch Man</li><li>Spy x Family</li></ul></div><div><h5>Category B</h5><ul><li>Attack on Titan</li><li>One Piece</li><li>Naruto</li></ul></div><div><h5>Category C</h5><ul><li>Bleach</li><li>Jujutsu Kaisen</li><li>Jojo's Bizarre Adventure</li></ul></div></div></div></details>
+          </article>
+          <article class="seg-card" data-cat="quiz">
+            <div class="seg-top"><span class="seg-num">03</span><span class="seg-fee">50/-</span></div>
+            <h3>Marvel &amp; DC Quiz</h3>
+            <p class="seg-desc">A superhero-themed quiz covering Marvel and DC films, characters, teams, powers, and major storylines. Only cinematic releases.</p>
+            <details class="seg-details"><summary>Films covered</summary><div class="seg-details-body"><dl class="seg-kv"><div><dt>MCU</dt><dd>The Avengers, Avengers: Age of Ultron, Avengers: Infinity War, Avengers: Endgame</dd></div><div><dt>DCEU</dt><dd>Aquaman (2018), Black Adam (2022), The Flash (2023), The Batman (2022)</dd></div></dl></div></details>
+          </article>
+          <article class="seg-card" data-cat="quiz">
+            <div class="seg-top"><span class="seg-num">04</span><span class="seg-fee">50/-</span></div>
+            <h3>Instrumental Quiz</h3>
+            <p class="seg-desc">Participants will identify musical instruments, sounds, famous instrumental pieces, and basic music-related facts. The segment may include audio-based identification rounds.</p>
+            <details class="seg-details"><summary>Instruments</summary><div class="seg-details-body"><p class="seg-chiplabel">Instruments</p><ul class="seg-chips"><li>Acoustic guitar</li><li>Piano</li><li>Bass</li><li>Tabla</li></ul></div></details>
+          </article>
+          <article class="seg-card" data-cat="quiz">
+            <div class="seg-top"><span class="seg-num">05</span><span class="seg-fee">50/-</span></div>
+            <h3>Guess the Song</h3>
+            <p class="seg-desc">Participants will identify songs from short audio clips, instrumental versions, lyrics-based clues, or other hints. The selection may include Bangla, English, Hindi and other popular music.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="vocal">
+            <div class="seg-top"><span class="seg-num">06</span><span class="seg-fee">100/-</span></div>
+            <h3>Folk Song</h3>
+            <p class="seg-desc">A solo vocal performance of Bengali Folk Songs. Participants will be evaluated on vocal quality, melody, pronunciation, expression, rhythm and overall presentation.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="vocal">
+            <div class="seg-top"><span class="seg-num">07</span><span class="seg-fee">100/-</span></div>
+            <h3>Rabindra Sangeet</h3>
+            <p class="seg-desc">A solo vocal performance featuring songs composed by Rabindranath Tagore. Participants will be evaluated on vocal quality, melody, pronunciation, expression, rhythm and overall presentation.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="vocal">
+            <div class="seg-top"><span class="seg-num">08</span><span class="seg-fee">100/-</span></div>
+            <h3>Nazrul Sangeet</h3>
+            <p class="seg-desc">A vocal performance featuring songs composed by Kazi Nazrul Islam. Participants will be evaluated on vocal quality, melody, pronunciation, expression, rhythm and overall presentation.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="vocal">
+            <div class="seg-top"><span class="seg-num">09</span><span class="seg-fee">100/-</span></div>
+            <h3>Patriotic Song</h3>
+            <p class="seg-desc">Participants will perform songs expressing patriotism, national identity, freedom, or love for the country. Participants will be evaluated on vocal quality, melody, pronunciation, expression, rhythm and overall presentation.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="vocal">
+            <div class="seg-top"><span class="seg-num">10</span><span class="seg-fee">100/-</span></div>
+            <h3>Classical Song</h3>
+            <p class="seg-desc">A vocal segment focusing on classical music and its traditional techniques. Participants may perform an appropriate classical composition while demonstrating melody, rhythm, control, and musical understanding.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="vocal">
+            <div class="seg-top"><span class="seg-num">11</span><span class="seg-fee">100/-</span></div>
+            <h3>Modern Song</h3>
+            <p class="seg-desc">Participants will perform contemporary Bangla modern songs. Creativity, vocal performance, musicality, stage presence, and overall presentation will be considered.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="instr">
+            <div class="seg-top"><span class="seg-num">12</span><span class="seg-fee">150/-</span></div>
+            <h3>Traditional Instrumental</h3>
+            <p class="seg-desc">A performance segment dedicated to traditional musical instruments and compositions. Participants may perform solo demonstrating technical skill and musical expression.</p>
+            <details class="seg-details"><summary>Instruments</summary><div class="seg-details-body"><p class="seg-chiplabel">Instruments</p><ul class="seg-chips"><li>Harmonium</li><li>Tabla</li><li>Dhol</li><li>Sitar</li><li>Flute</li><li>Ektara</li><li>Dotara</li><li>Hawaiian guitar</li><li>etc.</li></ul></div></details>
+          </article>
+          <article class="seg-card" data-cat="instr">
+            <div class="seg-top"><span class="seg-num">13</span><span class="seg-fee">150/-</span></div>
+            <h3>Modern Instrumental</h3>
+            <p class="seg-desc">Participants will perform contemporary music using one instrument. Original arrangements, covers, instrumental interpretation, technique, and stage presentation are encouraged.</p>
+            <details class="seg-details"><summary>Instruments</summary><div class="seg-details-body"><p class="seg-chiplabel">Instruments</p><ul class="seg-chips"><li>Keyboard</li><li>Acoustic guitar</li><li>Electric guitar</li><li>Bass</li><li>Violin</li><li>etc.</li></ul></div></details>
+          </article>
+          <article class="seg-card" data-cat="lit">
+            <div class="seg-top"><span class="seg-num">14</span><span class="seg-fee">50/-</span></div>
+            <h3>Recitation (Bangla &amp; English)</h3>
+            <p class="seg-desc">Participants will recite a selected Bangla or English poem with appropriate pronunciation, rhythm, expression, and emotion. Effective voice modulation and interpretation of the poem will be important.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="art">
+            <div class="seg-top"><span class="seg-num">15</span><span class="seg-fee">100/-</span></div>
+            <h3>Drawing</h3>
+            <p class="seg-desc">Participants will create an artwork based on a theme provided by the organizers. Creativity, composition, originality, relevance to the theme, and artistic execution will be considered.</p>
+            <details class="seg-details"><summary>Themes by category</summary><div class="seg-details-body"><div class="seg-cols"><div><h5>Category A</h5><ul><li>Beautiful Bangladesh Village</li><li>Bangladesh Nature / 7 Seasons of Bangladesh</li><li>A magical world under sea</li></ul></div><div><h5>Category B</h5><ul><li>Bangladesh's Culture</li><li>A City of Future</li><li>The world without Plastic</li></ul></div><div><h5>Category C</h5><ul><li>Humanities in the age of Artificial Intelligence</li><li>Climate change: The World we leave behind</li><li>The Future I want to see</li></ul></div></div></div></details>
+          </article>
+          <article class="seg-card" data-cat="lit">
+            <div class="seg-top"><span class="seg-num">16</span><span class="seg-fee">50/-</span></div>
+            <h3>Extempore Speech</h3>
+            <p class="seg-desc">Participants will receive a topic and prepare a short speech within a limited preparation time. The event will assess communication, organization of ideas, fluency, confidence, relevance, and delivery.</p>
+            <details class="seg-details"><summary>Topics by category</summary><div class="seg-details-body"><div class="seg-cols"><div><h5>Category A · Class 6–8</h5><ul><li>Our Culture, Our Identity</li><li>The Power of Folk Music</li><li>Can Culture Unite People?</li></ul></div><div><h5>Category B · Class 9–10</h5><ul><li>Music as a Language Beyond Words</li><li>Why Do We Need Art?</li><li>The Role of Literature in Shaping Society</li><li>One Generation, Two Cultures</li></ul></div><div><h5>Category C · Class 11–12</h5><ul><li>The Future of Bengali Culture</li><li>Globalization: Threat or Opportunity for Culture?</li><li>Can Western Culture and Bengali Culture Coexist?</li><li>The Culture We Inherit vs The Culture We Create</li></ul></div></div></div></details>
+          </article>
+          <article class="seg-card" data-cat="lit">
+            <div class="seg-top"><span class="seg-num">17</span><span class="seg-fee">100/-</span></div>
+            <h3>Essay Writing — Bangla</h3>
+            <p class="seg-desc">Participants will write an original Bangla essay based on a given topic. Evaluation will focus on ideas, organization, language, vocabulary, originality, grammar, and relevance to the topic.</p>
+            <details class="seg-details wide"><summary>Essay topics</summary><div class="seg-details-body"><div class="seg-table-wrap"><table class="seg-table"><thead><tr><th>Category</th><th>Topic 1</th><th>Topic 2</th><th>Topic 3</th></tr></thead><tbody><tr><th scope="row">Category A<small>Classes 6–8</small></th><td><span lang="bn">আমার প্রিয় ঋতু ও বাংলাদেশের প্রকৃতি</span><em>My Favourite Season and the Nature of Bangladesh</em></td><td><span lang="bn">সময়ের মূল্য</span><em>The Value of Time</em></td><td><span lang="bn">পরিচ্ছন্ন স্কুল, সুন্দর পরিবেশ</span><em>A Clean School, A Better Environment</em></td></tr><tr><th scope="row">Category B<small>Classes 9–10</small></th><td><span lang="bn">সামাজিক জীবনে প্রযুক্তির প্রভাব</span><em>The Impact of Technology on Social Life</em></td><td><span lang="bn">পরিবেশ রক্ষায় তরুণদের ভূমিকা</span><em>The Role of Youth in Protecting the Environment</em></td><td><span lang="bn">শিক্ষার্থীদের জীবনে বই পড়ার গুরুত্ব</span><em>The Importance of Reading Books in a Student's Life</em></td></tr><tr><th scope="row">Category C<small>Classes 11–12</small></th><td><span lang="bn">কৃত্রিম বুদ্ধিমত্তা ও ভবিষ্যতের শিক্ষা</span><em>Artificial Intelligence and the Future of Education</em></td><td><span lang="bn">জলবায়ু পরিবর্তন: বাংলাদেশের চ্যালেঞ্জ ও করণীয়</span><em>Climate Change: Challenges for Bangladesh and the Way Forward</em></td><td><span lang="bn">ডিজিটাল যুগে দায়িত্বশীল নাগরিকত্ব</span><em>Responsible Citizenship in the Digital Age</em></td></tr></tbody></table></div></div></details>
+          </article>
+          <article class="seg-card" data-cat="lit">
+            <div class="seg-top"><span class="seg-num">18</span><span class="seg-fee">100/-</span></div>
+            <h3>Essay Writing — English</h3>
+            <p class="seg-desc">Participants will write an original English essay on a given topic. Assessment will include content, organization, vocabulary, grammar, coherence, originality, and overall expression.</p>
+            <details class="seg-details wide"><summary>Essay topics</summary><div class="seg-details-body"><div class="seg-table-wrap"><table class="seg-table"><thead><tr><th>Category</th><th>Topic 1</th><th>Topic 2</th><th>Topic 3</th></tr></thead><tbody><tr><th scope="row">Category A<small>Classes 6–8</small></th><td><span lang="bn">আমার প্রিয় ঋতু ও বাংলাদেশের প্রকৃতি</span><em>My Favourite Season and the Nature of Bangladesh</em></td><td><span lang="bn">সময়ের মূল্য</span><em>The Value of Time</em></td><td><span lang="bn">পরিচ্ছন্ন স্কুল, সুন্দর পরিবেশ</span><em>A Clean School, A Better Environment</em></td></tr><tr><th scope="row">Category B<small>Classes 9–10</small></th><td><span lang="bn">সামাজিক জীবনে প্রযুক্তির প্রভাব</span><em>The Impact of Technology on Social Life</em></td><td><span lang="bn">পরিবেশ রক্ষায় তরুণদের ভূমিকা</span><em>The Role of Youth in Protecting the Environment</em></td><td><span lang="bn">শিক্ষার্থীদের জীবনে বই পড়ার গুরুত্ব</span><em>The Importance of Reading Books in a Student's Life</em></td></tr><tr><th scope="row">Category C<small>Classes 11–12</small></th><td><span lang="bn">কৃত্রিম বুদ্ধিমত্তা ও ভবিষ্যতের শিক্ষা</span><em>Artificial Intelligence and the Future of Education</em></td><td><span lang="bn">জলবায়ু পরিবর্তন: বাংলাদেশের চ্যালেঞ্জ ও করণীয়</span><em>Climate Change: Challenges for Bangladesh and the Way Forward</em></td><td><span lang="bn">ডিজিটাল যুগে দায়িত্বশীল নাগরিকত্ব</span><em>Responsible Citizenship in the Digital Age</em></td></tr></tbody></table></div></div></details>
+          </article>
+          <article class="seg-card" data-cat="art">
+            <div class="seg-top"><span class="seg-num">19</span><span class="seg-fee">100/-</span></div>
+            <h3>Calligraphy</h3>
+            <p class="seg-desc">Participants will demonstrate artistic handwriting and lettering using a provided phrase, quotation, or theme. Neatness, creativity, composition, consistency, and visual presentation will be evaluated.</p>
+            <details class="seg-details"><summary>Languages</summary><div class="seg-details-body"><p class="seg-chiplabel">Language</p><ul class="seg-chips"><li>Bengali</li><li>English</li><li>Arabic</li></ul></div></details>
+          </article>
+          <article class="seg-card" data-cat="dance">
+            <div class="seg-top"><span class="seg-num">20</span><span class="seg-fee">100/-</span></div>
+            <h3>Traditional Dance</h3>
+            <p class="seg-desc">A dance segment celebrating traditional and cultural dance forms. Participants may present recognized traditional styles while maintaining appropriate technique, expression, costume, music, and cultural representation.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="art">
+            <div class="seg-top"><span class="seg-num">21</span><span class="seg-fee">50/-</span></div>
+            <h3>Mobile Photography</h3>
+            <p class="seg-desc">Participants will capture photographs using a mobile phone based on a specified theme or category. Composition, lighting, creativity, storytelling, originality, and relevance to the theme will be considered.</p>
+            <p class="seg-note">Frame: 250/-</p>
+          </article>
+          <article class="seg-card" data-cat="art">
+            <div class="seg-top"><span class="seg-num">22</span><span class="seg-fee">50/-</span></div>
+            <h3>DSLR Photography</h3>
+            <p class="seg-desc">A photography competition using DSLR or professional cameras. Participants will be judged on composition, lighting, technical execution, creativity, subject selection, and storytelling.</p>
+            <p class="seg-note">Frame: 250/-</p>
+          </article>
+          <article class="seg-card" data-cat="dance">
+            <div class="seg-top"><span class="seg-num">23</span><span class="seg-fee">700/-</span></div>
+            <h3>Battle of Bands / Acoustic Showdown</h3>
+            <p class="seg-desc">Bands or musical groups will compete through live performances. Originality, musical coordination, instrumental/vocal performance, arrangement, stage presence, and overall impact will be considered.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="dance">
+            <div class="seg-top"><span class="seg-num">24</span><span class="seg-fee">600/-</span></div>
+            <h3>Dance Fusion</h3>
+            <p class="seg-desc">A creative dance performance combining two or more dance styles. Participants are encouraged to experiment with choreography, music, transitions, formations, and creative storytelling.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="dance">
+            <div class="seg-top"><span class="seg-num">25</span><span class="seg-fee">250/-</span></div>
+            <h3>Wall Magazine</h3>
+            <p class="seg-desc">Teams will design and create a wall magazine around a given theme. Content, research, creativity, visual design, organization, originality, and effective presentation will be evaluated.</p>
+            <details class="seg-details"><summary>Wall magazine themes</summary><div class="seg-details-body"><ol class="seg-themes"><li><strong><span lang="bn">শিকড়ের সন্ধানে</span> — Exploring Our Cultural Roots</strong><span lang="bn">বাংলাদেশের ঐতিহ্য, লোকজ সংস্কৃতি, পোশাক, খাবার, আচার-অনুষ্ঠান, জীবনধারা।</span></li><li><strong><span lang="bn">বাংলার রূপকথা</span> — Folk Tales, Legends &amp; Myths of Bengal</strong><span lang="bn">রূপকথা, লোককাহিনি, কিংবদন্তি, গ্রামীণ গল্প ও মুখে-মুখে চলে আসা ঐতিহ্য।</span></li><li><strong><span lang="bn">বাংলার বারো মাস</span> — Culture, Festivals &amp; Traditions Throughout the Year</strong><span lang="bn">ঋতু, উৎসব, মেলা, কৃষি, খাবার ও বিভিন্ন মাসের সাংস্কৃতিক বৈশিষ্ট্য।</span></li><li><strong><span lang="bn">সুরে বাংলার আত্মা</span> — The Soul of Bengal Through Music</strong><span lang="bn">বাউল, ভাটিয়ালি, রবীন্দ্রসংগীত, নজরুলগীতি, লোকগান থেকে আধুনিক ব্যান্ড—একটি musical journey।</span></li><li><strong><span lang="bn">যদি বাংলা কথা বলত</span> — If Bengal Could Speak</strong><span lang="bn">পুরো wall magazine-টা যেন "বাংলা" নিজেই তার ইতিহাস, মানুষ, সংস্কৃতি ও পরিবর্তনের গল্প বলছে।</span></li><li><strong><span lang="bn">হারিয়ে যাওয়ার আগে</span> — Before They Disappear</strong><span lang="bn">হারিয়ে যেতে বসা লোকজ সংস্কৃতি, খেলাধুলা, বাদ্যযন্ত্র, কারুশিল্প, খাবার, পোশাক ও প্রথা।</span></li></ol></div></details>
+          </article>
+          <article class="seg-card" data-cat="dance">
+            <div class="seg-top"><span class="seg-num">26</span><span class="seg-fee">250/-</span></div>
+            <h3>Group Theatre</h3>
+            <p class="seg-desc">Teams will present a short theatrical performance based on a selected or assigned theme. Acting, storytelling, dialogue delivery, teamwork, direction, creativity, and stage presentation will be assessed.</p>
+            
+          </article>
+          <article class="seg-card" data-cat="sponsor">
+            <div class="seg-top"><span class="seg-num">27</span><span class="seg-fee sponsor">Sponsor based</span></div>
+            <h3>Fashion &amp; Brand Showcase</h3>
+            <p class="seg-desc">A sponsor-led fashion showcase featuring participating brands through curated runway presentations, highlighting their collections, creativity, and distinctive styles. Participants must wear appropriate clothes in order to participate.</p>
+            
+          </article>
+      </div>
+
+      <!-- =================================================================
+           REGISTRATION BUTTON
+           Paste your Google Form link between the quotation marks in href="..." below,
+           e.g.  href="https://forms.gle/xxxxxxxx"
+           To hide this whole box, delete the <div class="register-box"> ... </div> block.
+           ================================================================= -->
+      <div class="register-box">
+        <div>
+          <h3>Register for the Summit</h3>
+          <p>Choose your segment(s) and fill in the registration form.</p>
+        </div>
+        <a class="btn-solid" href="PASTE-YOUR-REGISTRATION-LINK-HERE" target="_blank" rel="noopener">Register Now</a>
+      </div>
+    </div>
+  </section>
+  
+
+<section class="advisors">
+    <div class="wrap">
+      <h2>Advisors</h2>
+      <div class="advisor-grid">
+
+        <!-- Advisor 1 — photo: images/advisor/advisor-1.jpg  |  edit the name and role below -->
+        <div class="advisor-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+          <img src="images/advisor/advisor-1.jpg" alt="Advisor Name 1" onerror="this.style.display='none';">
+          <span>Advisor Name 1<em>Moderator</em></span>
+        </div>
+
+        <!-- Advisor 2 — photo: images/advisor/advisor-2.jpg  |  edit the name and role below -->
+        <div class="advisor-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+          <img src="images/advisor/advisor-2.jpg" alt="Advisor Name 2" onerror="this.style.display='none';">
+          <span>Advisor Name 2<em>Co-Moderator</em></span>
+        </div>
+
+        <!-- Advisor 3 — photo: images/advisor/advisor-3.jpg  |  edit the name and role below -->
+        <div class="advisor-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+          <img src="images/advisor/advisor-3.jpg" alt="Advisor Name 3" onerror="this.style.display='none';">
+          <span>Advisor Name 3<em>Club Founder</em></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="events more-events">
+    <div class="wrap">
+      <h2>More upcoming</h2>
+      <div class="event-row">
+        <div class="event-date"><b>16</b><span>Dec</span></div>
+        <div class="event-info">
+          <h3>Victory Day Programme</h3>
+          <p>A student-led programme of songs, recitation and performance for Victory Day.</p>
+        </div>
+        <span class="event-tag">Upcoming</span>
+      </div>
+      <div class="event-row">
+        <div class="event-date"><b>21</b><span>Feb</span></div>
+        <div class="event-info">
+          <h3>International Mother Language Day</h3>
+          <p>Poetry, music and art in honour of the Language Movement.</p>
+        </div>
+        <span class="event-tag">Upcoming</span>
+      </div>
+      <div class="event-row">
+        <div class="event-date"><b>26</b><span>Mar</span></div>
+        <div class="event-info">
+          <h3>Independence Day Programme</h3>
+          <p>Performances and exhibitions celebrating Independence Day.</p>
+        </div>
+        <span class="event-tag">Upcoming</span>
+      </div>
+      <div class="event-row">
+        <div class="event-date"><b>14</b><span>Apr</span></div>
+        <div class="event-info">
+          <h3>Pohela Boishakh Celebration</h3>
+          <p>The Bengali New Year, with music, dance and a student art display.</p>
+        </div>
+        <span class="event-tag">Upcoming</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-main">
+    <div class="foot-mark">
+      <img src="images/Cultural_Club_Logo_BG.png" alt="ACPS Cultural Club logo">
+      <span>© 2026 Cultural Club, Adamjee Cantonment Public School</span>
+    </div>
+    <span><a href="asmc.html">ASMC — Music Club</a></span>
+  </div>
+  <div class="credit">
+    <div class="wrap">Website by- Ayush Chakraborty</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
